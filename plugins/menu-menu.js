@@ -26,14 +26,12 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 ╭═══〘 ✯✯✯✯✯✯✯✯✯ 〙══╮
-║    ◉— *𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭* —◉
+║    ◉— *Panques Bot* —◉
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *𝗛ola, ${taguser}*
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *Owner:* Bruno Sobrino
-║➤ *Numero:* wa.me/5219992095479
-║➤ *Bot ofc:* wa.me/5219991402134
-║➤ *PayPal:* https://www.paypal.me/TheShadowBrokers133
+║➤ *Editor:* Tuty
 ║➤ *Fecha:* ${date}
 ║➤ *Tiempo activo:* ${uptime}
 ║➤ *Usuarios:* ${rtotalreg}
@@ -51,33 +49,6 @@ let str = `
 ┣ *🎟️ Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
 ┗━━━━━━━━━━━━━━━━┛
 ${readMore}
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝔹𝕆𝕋 𝕆𝔽ℂ 𝕆 𝕊𝕌𝔹 𝔹𝕆𝕋 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ${(conn.user.jid == global.conn.user.jid ? '' : `Jadibot de: https://wa.me/${global.conn.user.jid.split`@`[0]}`) || '*Este es el Bot oficial*'}
-┗━━━━━━━━━━━━━━━━┛
-
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝕀ℕ𝔽𝕆 𝔹𝕆𝕋 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 💟 _${usedPrefix}terminosycondiciones_
-┣ ඬ⃟ 💟 _${usedPrefix}grupos_
-┣ ඬ⃟ 💟 _${usedPrefix}estado_
-┣ ඬ⃟ 💟 _${usedPrefix}infobot_
-┣ ඬ⃟ 💟 _${usedPrefix}speedtest_
-┣ ඬ⃟ 💟 _${usedPrefix}donar_
-┣ ඬ⃟ 💟 _${usedPrefix}grouplist_
-┣ ඬ⃟ 💟 _${usedPrefix}owner_
-┣ ඬ⃟ 💟 _${usedPrefix}script_
-┣ ඬ⃟ 💟 _${usedPrefix}listprem_
-┣ ඬ⃟ 💟 _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-┗━━━━━━━━━━━━━━━━┛
-
-┏━━━━━━━━━━━━━━━━┓
-┃ *< 𝕌ℕ𝔼 𝕌ℕ 𝔹𝕆𝕋 𝔸 𝕋𝕌 𝔾ℝ𝕌ℙ𝕆 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
-┣ ඬ⃟ 👽 _${usedPrefix}join *<enlace / link / url>*_
-┗━━━━━━━━━━━━━━━━┛
 
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< 𝕊𝔼ℝ𝔹𝕆𝕋 - 𝕁𝔸𝔻𝕀𝔹𝕆𝕋 />*
@@ -627,33 +598,6 @@ ${readMore}
 ┣ ඬ⃟ 💀 _${usedPrefix}crash8_
 ┗━━━━━━━━━━━━━━━━┛
 `.trim()
-let buttons = [
-{ buttonId: '#donar', buttonText: { displayText: '📮 𝙳𝙾𝙽𝙰𝚁 📮' }, type: 1 },
-//{ buttonId: '#terminosycondiciones', buttonText: { displayText: '📋 𝚃𝙴𝚁𝙼𝙸𝙽𝙾𝚂 𝚈 𝙲𝙾𝙽𝙳𝙸𝙲𝙸𝙾𝙽𝙴𝚂 📋' }, type: 1 }]
-{ buttonId: '#infobot', buttonText: { displayText: '🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾' }, type: 1 }]
-let buttonMessage = {
-image: pp,
-caption: str.trim(),
-mentions: [m.sender],
-footer: `*${wm}*`,
-buttons: buttons,
-headerType: 4,
-contextInfo: {
-mentionedJid: [m.sender],
-externalAdReply: {
-showAdAttribution: true,
-mediaType: 'VIDEO',
-mediaUrl: null,
-title: '👑 𝐓𝐇𝐄 𝐌𝐘𝐒𝐓𝐈𝐂 - 𝐁𝐎𝐓 👑',
-body: null,
-thumbnail: img,
-sourceUrl: `https://www.paypal.me/TheShadowBrokers133`
-}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-} catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
-}}
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i
 handler.exp = 50
 handler.fail = null
